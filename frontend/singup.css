@@ -95,3 +95,31 @@ form input{
     font-size: 15px;
     text-align: center;
 }
+@media all and (max-width:500px){
+
+    .check{
+        display: block;
+        margin-top: 20px;
+    }
+    .navbar{
+        display: none;
+        position: absolute;
+    }
+    #hamburger:checked + .navbar{
+        display: block;
+        top:60px;
+        left:0;
+        right:200px;
+        text-align: center;
+       font-size: 1.3rem;
+        width: 100%;
+        margin: auto;
+        background-color: red;
+    }
+    .cont{
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+}

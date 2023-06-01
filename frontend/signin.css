@@ -92,3 +92,31 @@ form input{
     cursor: pointer;
    
 }
+@media all and (max-width:520px){
+
+    .check{
+        display: block;
+        margin-top: 20px;
+    }
+    .navbar{
+        display: none;
+        position: absolute;
+    }
+    #hamburger:checked + .navbar{
+        display: block;
+        top:60px;
+        left:0;
+        right:0;
+        text-align: center;
+       font-size: 1.3rem;
+        width: 100%;
+        margin: auto;
+        background-color: red;
+    }
+  .container{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+}

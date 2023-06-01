@@ -2,8 +2,10 @@
 const express=require("express");
 const weatherRouter=express.Router();
 
+const {saveModal}=require("../modals/saveModal")
 // import fetch for fetching data
-const fetch=require("isomorphic-fetch")
+const fetch=require("isomorphic-fetch");
+const { authenticate } = require("../middleware/authenticate");
 const api_key="1b62416bd4ac9173b397de5b3ec88f83"
 
 weatherRouter.get("/location",async(req,res)=>{
@@ -19,6 +21,17 @@ weatherRouter.get("/location",async(req,res)=>{
     } catch (error) {
         res.status(500).json({ error: 'An error occurred' });
 
+    }
+})
+
+weatherRouter.post("/save",authenticate,async(req,res)=>{
+    const {location,temp,userID}=req.body
+    try {
+        const result=new saveModal({location,temp,userID});
+        await result.save();
+        res.status(200).json("History has been saved")
+    } catch (error) {
+        res.status(404).json("Getting error while saving history")
     }
 })
 module.exports={weatherRouter}

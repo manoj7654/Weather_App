@@ -62,7 +62,7 @@
 .banner{
     height: 700px;
     width: 100%;
-    border: 1px solid red;
+    border: 1px solid white;
     background-image: url("https://www.linkpicture.com/q/weather.png");
     background-size: cover;
 }
@@ -72,7 +72,7 @@
     font-size: 3rem;
 }
 
-@media all and (max-width:375px){
+@media all and (max-width:520px){
 
     .check{
         display: block;
@@ -91,10 +91,16 @@
        font-size: 1.3rem;
         width: 100%;
         margin: auto;
-        background-color: red;
+        /* background-color: red; */
     }
     .banner h1{
         width: auto;
     }
-
+    .banner{
+        height: 700px;
+        width: 100%;
+        border: 1px solid red;
+        background-image: url("https://www.linkpicture.com/q/22_68.jpg");
+        background-size: cover;
+    }
 }
