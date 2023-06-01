@@ -17,7 +17,7 @@ let obj={
 
 async function addData(obj){
     try {
-        let res=await fetch("http://localhost:4500/users/register",{
+        let res=await fetch("https://lavender-pelican-toga.cyclic.app/users/register",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -27,7 +27,7 @@ async function addData(obj){
         console.log(res)
         if(res.ok){
             let data=await res.json()
-            alert("User already registered")
+            alert("User Registration Successful")
             window.location.href=("./signin.html")
             
         }

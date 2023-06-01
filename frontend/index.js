@@ -12,7 +12,7 @@ if(token){
   async function getData(location) {
     try {
       const result = await fetch(
-        `http://localhost:4500/weathers/location/?q=${location}`
+        `https://lavender-pelican-toga.cyclic.app/weathers/location/?q=${location}`
       );
   
       const res = await result.json();
@@ -67,7 +67,7 @@ btn.addEventListener("click",()=>{
   saveData(obj)
   async function saveData(obj){
     try {
-      const result=await fetch("http://localhost:4500/weathers/save",{
+      const result=await fetch("https://lavender-pelican-toga.cyclic.app/weathers/save",{
         method:"POST",
         headers:{
           "Content-Type":"application/json",

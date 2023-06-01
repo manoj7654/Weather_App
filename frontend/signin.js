@@ -14,7 +14,7 @@ let obj={
 
 async function login(obj){
     try {
-        let res=await fetch("http://localhost:4500/users/login",{
+        let res=await fetch("https://lavender-pelican-toga.cyclic.app/users/login",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
