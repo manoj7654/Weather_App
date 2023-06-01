@@ -43,6 +43,7 @@ if(token){
       <h2>${(res.main.temp - 273.15).toFixed(2)}°C</h2>
        <p>Humidity:${res.main.humidity}%</p>
         <p>Wind:${res.wind.speed}k/h</p>
+        <p> Wind Direction:${res.wind.deg}</p>
    </div>
    <div id="image">
       <img src="https://openweathermap.org/img/wn/${res.weather[0].icon}.png"/>
@@ -52,7 +53,7 @@ if(token){
    </div>
    `;
 
-  // console.log(res.weather[0].icon);
+  console.log(res);
   let btn=document.getElementById("save");
  
  

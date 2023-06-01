@@ -133,13 +133,19 @@ margin-top: 10px;
 
 #save{
     text-align: center;
-    height: 50px;
-    width: 50%;
+    height: 30px;
+    width: 40%;
     background-color: green;
     color:white;
     font-size: 20px;
     margin-left: 90px;
     margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+}
+#save:hover{
+    background-color: blueviolet;
+    cursor: pointer;
 }
 @media all and (max-width:520px){
 
